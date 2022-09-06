@@ -4,9 +4,9 @@
 
 // 6, 1, 33 -> [6, 1, 33]
 
-NewRandomArrayFrom8();
+NewRandomArrayFrom(8);
 
-void NewRandomArrayFrom8()
+void NewRandomArrayFrom(int arrayLength)
 { 
     int [] array = new int[8];
     Random rand = new Random();
