@@ -3,22 +3,26 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
 // 6, 1, 33 -> [6, 1, 33]
+int[] result = NewRandomArray(8);
+PrintArray (result);
 
-NewRandomArrayFrom(8);
-
-void NewRandomArrayFrom(int arrayLength)
+int[] NewRandomArray(int num)
 { 
-    int [] array = new int[8];
+    int [] array = new int[num];
     Random rand = new Random();
-    for (int i = 0; i < 8; i++)
+    int i = 0;
+    while ( i < num)
     {
         array[i] = rand.Next(-2147483648, 2147483647);
+        i++;
     }
-
-    for (int i = 0; i < 8; i++)
-    {
-        Console.WriteLine(array[i]);
-    }
+    return array;
 }
 
-
+void PrintArray (int[] arr)
+{
+    for (int i = 0; i < 8; i++)
+    {
+        Console.Write($" {arr[i]} ");
+    }
+}    
